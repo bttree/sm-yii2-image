@@ -1,6 +1,6 @@
 {
     "name": "bttree/sm-yii2-image",
-    "description": "Sitemaket yii2 image",
+    "description": "SiteMaket yii2 image",
     "type": "yii2-behavior",
     "keywords": ["yii2", "image", "thumbnail", "upload"],
     "license": "BSD-3-Clause",
@@ -10,7 +10,6 @@
             "email": "dev@sitemaket.ru"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "imagine/imagine": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
