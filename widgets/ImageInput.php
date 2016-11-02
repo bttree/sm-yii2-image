@@ -1,6 +1,6 @@
 <?php
 
-namespace bttree\smyimage;
+namespace bttree\smyimage\widgets;
 
 use bttree\smyupload\FileUploadBehavior;
 use kartik\file\FileInput;
