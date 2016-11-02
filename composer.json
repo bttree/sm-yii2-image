@@ -19,18 +19,12 @@
     "repositories": [
         {
             "type": "vcs" ,
-            "url": "git@bitbucket.org:bttree/sm-yii2-upload.git" ,
-            "reference": "dev-master"
+            "url": "git@bitbucket.org:bttree/sm-yii2-upload.git"
         }
     ] ,
     "autoload": {
         "psr-4": {
             "bttree\\smyimage\\": ""
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "v1.0.1"
         }
     }
 }
