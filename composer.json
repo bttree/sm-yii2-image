@@ -10,6 +10,7 @@
             "email": "dev@sitemaket.ru"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
         "imagine/imagine": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
