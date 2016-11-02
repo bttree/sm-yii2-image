@@ -1,0 +1,23 @@
+{
+    "name": "bttree/sm-yii2-image",
+    "description": "Sitemaket yii2 image",
+    "type": "yii2-behavior",
+    "keywords": ["yii2", "image", "thumbnail", "upload"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "SiteMaket team",
+            "email": "dev@sitemaket.ru"
+        }
+    ],
+    "require": {
+        "imagine/imagine": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "bttree/sm-yii2-upload": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "bttree\\smyimage\\": ""
+        }
+    }
+}
