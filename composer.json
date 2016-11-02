@@ -16,6 +16,13 @@
         "kartik-v/yii2-widget-fileinput": "@dev",
         "bttree/sm-yii2-upload": "*"
     },
+    "repositories": [
+        {
+            "type": "vcs" ,
+            "url": "git@bitbucket.org:bttree/sm-yii2-upload.git" ,
+            "reference": "dev-master"
+        }
+    ] ,
     "autoload": {
         "psr-4": {
             "bttree\\smyimage\\": ""
