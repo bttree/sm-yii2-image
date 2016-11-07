@@ -2,7 +2,7 @@
 namespace bttree\smyimage\behaviors;
 
 use bttree\smyimage\components\Image;
-use amylabs\upload\FileUploadBehavior;
+use bttree\smyupload\behaviors\FileUploadBehavior;
 use Imagine\Image\ImageInterface;
 use Yii;
 
