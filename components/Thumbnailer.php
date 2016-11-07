@@ -15,12 +15,12 @@ class Thumbnailer extends Component
     /**
      * @var string - Путь к корневой директории для загрузки
      */
-    public $uploadPath = '@static/thumbs';
+    public $uploadPath = '';
 
     /**
      * @var string - Url к корневой папке загрузок
      */
-    public $uploadUrl = '@staticUrl/thumbs';
+    public $uploadUrl = '';
 
     /**
      * @var null|string Полный путь к изображению по умолчанию
