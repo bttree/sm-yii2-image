@@ -45,7 +45,8 @@ class Thumbnailer extends Component
         $height,
         $crop = false,
         $stretch = false,
-        $options = ['jpeg_quality' => 100, 'png_compression_level' => 9]
+        $options = ['jpeg_quality' => 100, 'png_compression_level' => 9],
+        $destinationPath = false
     ) {
         $isRealImage = (bool)$file;
         $file = $file ?: Yii::getAlias($this->defaultImage);
@@ -54,7 +55,14 @@ class Thumbnailer extends Component
 
         $newBaseName = $this->generateBaseName($file);
         $name = dirname($newBaseName) . '/' . $width . 'x' . $height . '_' . $mode . '_' . ($stretch ? 'stretch' : 'normal') . ($this->applyWatermarkImage ? '_wm' : '') . '_' . pathinfo($newBaseName, PATHINFO_BASENAME);
-        $thumbFile = $this->getFilePath($name);
+        if($destinationPath)
+        {
+            $thumbFile = $destinationPath;
+        }
+        else
+        {
+            $thumbFile = $this->getFilePath($name);
+        }
 
         $dir = dirname($thumbFile);
 
@@ -99,7 +107,6 @@ class Thumbnailer extends Component
             if ($isRealImage && $newWidth >= $this->minWidthForWatermark && $newHeight >= $this->minHeightForWatermark) {
                 $newImage = $this->applyWatermark($newImage);
             }
-
             $newImage->save($thumbFile, $options);
         }
 
