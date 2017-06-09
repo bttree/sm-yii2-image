@@ -45,7 +45,7 @@ class Thumbnailer extends Component
         $height,
         $crop = false,
         $stretch = false,
-        $options = ['jpeg_quality' => 100, 'png_compression_level' => 9],
+        $options = ['jpeg_quality' => 100, 'png_compression_level' => 9, 'animated' => true],
         $destinationPath = false
     ) {
         $isRealImage = (bool)$file;
