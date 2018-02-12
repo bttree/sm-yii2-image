@@ -34,6 +34,7 @@ class ImageUploadBehavior extends FileUploadBehavior
 
         $this->thumbnailer = Yii::$app->thumbnailer;
 
+
         if ($this->resizeOnUpload) {
             $this->resizeOptions = array_merge(
                 [
@@ -53,20 +54,22 @@ class ImageUploadBehavior extends FileUploadBehavior
     {
         parent::saveFile();
 
-        $imagine = Image::getImagine();
-        $image = $imagine->open($this->getFilePath());
+        if(!$this->chunk || $this->chunkComplite) {
+            $imagine = Image::getImagine();
+            $image = $imagine->open($this->getFilePath());
 
-        if ($this->resizeOnUpload) {
-            $this->resize(
-                $image,
-                $this->resizeOptions['width'],
-                $this->resizeOptions['height']
-            );
+            if ($this->resizeOnUpload) {
+                $this->resize(
+                    $image,
+                    $this->resizeOptions['width'],
+                    $this->resizeOptions['height']
+                );
 
-            $image->save(
-                $this->getFilePath(),
-                $this->resizeOptions['quality']
-            );
+                $image->save(
+                    $this->getFilePath(),
+                    $this->resizeOptions['quality']
+                );
+            }
         }
     }
 
